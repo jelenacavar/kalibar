@@ -37,6 +37,7 @@
     background-position: center;
     background-size: cover;
     background-origin: content-box;
+    background-color: transparent;
 }
 .fp-viewing-home #header, .fp-viewing-events #header{
     display: block;
@@ -62,4 +63,165 @@ footer{
 .img-responsive{
     max-width: 100%;
     height: auto;
+}
+.mobile-nav{
+    display: none;
+}
+i.close-icon{
+    display: none;
+}
+.footer-logo img{
+    max-height: 80px;
+    display: inline-block;
+}
+.footer-logo{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.footer-text{
+    display: inline;
+    text-align: center;
+    font-family: 'Arima Madurai', cursive;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+i.fa-facebook, i.fa-instagram{
+    font-size: 40px;
+    padding: 0 10px 20px 0;
+    color:#fff;
+    
+}
+.social-icons-menu{
+    display: none;
+}
+.social-icons-footer{
+    text-align: right;
+    padding-right: 20px;
+}
+#footer{
+    height: 200px !important;
+}
+.artist-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.artist-details{
+    position: absolute;
+    height: 50%;
+    margin: 0;
+}
+.artist-details.top-middle{
+    top: 0;
+    left: 20%;
+    background: #d3d3d3;
+    z-index: 2;
+    width: 60%;
+    -webkit-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
+    box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
+}
+.artist-details.bottom-left{
+    top: calc(50% - 40px);
+    width: 40%;
+    left: 10%;
+    background: #5aa46f;
+}
+.artist-details.bottom-right{
+    top: calc(50% - 40px);
+    width: 40%;
+    right: 10%;
+    background: #888;
+}
+.artist-details p{
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+}
+@media screen and (max-width: 840px)
+{    
+    #header{
+        display: block;
+    }
+    #fp-nav{
+        display: none;
+    }
+    i.close-icon{
+        display: block;
+        color: #5aa46f;
+        font-size: 28px;
+        float: right;
+        padding: 2px 20px 2px 2px;
+    }
+    #menu{
+        display: none;
+        position: fixed;
+        width: 60%;
+        right: 0;
+        background: rgba(0,0,0,0.8);
+        top: 0;
+    }
+    .social-icons-menu{
+        display: block;
+        text-align: right;
+    }
+    #header ul{
+        padding: 20px 0 20px 20px;
+        margin: 0;
+    }
+    #header li {
+        display: block;
+        padding-bottom: 10px;
+    }
+    #menu.active{
+        display: block;
+    }
+    #header li a{
+        color: #fff;
+    }
+    #header li a:hover, #header li.active a{
+        background-image: none;
+        color: #5aa46f;
+    }
+    .mobile-nav{
+        display: block;
+        background: #fff;
+        width: 60px;
+        width: 60px;
+        padding-top: 2px;
+        border: none;
+        outline: none;
+    }
+    .header-logo{
+        width: 60%;
+    }
+    .mobile-nav span{
+        border-bottom: 4px solid black;
+        padding: 5px 4px;
+        display: block;
+    }
+    .social-icons-footer{
+        display: none;
+    }
+    .artist-section{
+        height: auto !important;
+    }
+    .artist-details.top-middle{
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .artist-details{
+        position: relative;
+        left: 0 !important;
+        right: 0 !Important;
+        top: auto !important;
+        width: 100% !important;        
+        height: auto !important;
+        margin: 0;
+    }
+    .artist-details p{
+        margin: 0;
+        padding: 10px;
+    }
 }
