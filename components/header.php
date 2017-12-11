@@ -25,7 +25,7 @@
                 <a href="https://www.instagram.com/kalibaraarhus/?hl=hr"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 <a href="https://www.facebook.com/KALIBARAARHUS/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
-        </ul>
+        </ul>       
     </nav>
 </header>
 

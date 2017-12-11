@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 #header{
     position: fixed;
     top: 0;
@@ -9,6 +9,9 @@
     z-index: 1;
     display: none;
     max-height: 80px;
+}
+#menu{
+    display: none;
 }
 #header nav{
     display: inline-block;
@@ -138,13 +141,46 @@ i.fa-facebook, i.fa-instagram{
         padding: 20px;
         text-align: center;
 }
+#fp-nav ul li .fp-tooltip{
+    -webkit-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
+    width: auto;
+    opacity: 1;
+   font-family: 'Permanent Marker', cursive;
+   padding: 7px 0;
+   font-size: 20px;
+}
+#fp-nav ul li {
+    padding: 15px 0;
+    width: 0;
+    height: 0;
+    margin: 7px 0;
+    transform: rotate(-45deg);
+}
+#fp-nav ul li .fp-tooltip.right{
+    right: 0;
+}
+#fp-nav ul li a{
+    display: none;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
+    height: 16px;
+    width: 16px;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    height: 8px;
+    width: 8px;
+}
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active+.fp-tooltip{
+    text-decoration: line-through;
+}
 @media screen and (max-width: 840px)
 {    
     #header{
         display: block;
     }
     #fp-nav{
-        display: none;
+        display: none !important;
     }
     i.close-icon{
         display: block;
