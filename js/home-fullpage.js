@@ -33,13 +33,13 @@ $(document).ready(function() {
 		offsetSections: false,
 		resetSliders: false,
 		fadingEffect: false,
-		normalScrollElements: '#element1, .element2',
+		normalScrollElements: null,
 		scrollOverflow: false,
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null,
 		touchSensitivity: 15,
-		normalScrollElementTouchThreshold: 5,
-		bigSectionsDestination: null,
+		normalScrollElementTouchThreshold: 2,
+		bigSectionsDestination: 'bottom',
 
 		//Accessibility
 		keyboardScrolling: true,
