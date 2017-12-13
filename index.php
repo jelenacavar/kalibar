@@ -41,6 +41,9 @@
             <section class="section">
                 <!-- Gallery -->
             </section>
+             <section class="section">
+                <!-- Events -->
+            </section>
             <section class="section">
                 <!-- Photobox -->
             </section>

@@ -5,5 +5,5 @@ $(document).ready(function() {
     });
     $('#menu a, .close-icon').click(function(){
         $('#menu').removeClass('active');
-    });    
+    });
 });
