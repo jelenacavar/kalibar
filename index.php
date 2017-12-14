@@ -40,9 +40,19 @@ if(file_exists($sti))
                         </p>
                     </div>
                     <div class="artist-details bottom-right">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <div class="slideshow">
+                          <div class="slider slider-1">
+                            <div class="item">
+                              <img src="https://images.unsplash.com/photo-1465935343323-d742334bcbda?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                            </div>
+                            <div class="item">
+                              <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                            </div>
+                            <div class="item">
+                              <img src="https://images.unsplash.com/photo-1474861644511-0f2775ae97cc?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+                            </div>
+                          </div>
+                        </div>
                     </div>
                         
                 </div>
@@ -91,5 +101,6 @@ if(file_exists($sti))
         </div>
         <?php include 'components/scripts.php'; ?>
         <script src="js/home-fullpage.js"></script>
+        
     </body>
 </html>
