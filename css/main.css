@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@font-face {
-font-family: 'Arial Nova';
-font-style: normal;
-font-weight: normal;
-src: local('Arial Nova'), url('fonts/ArialNova.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 #header{
     position: fixed;
     top: 0;
@@ -38,7 +33,7 @@ src: local('Arial Nova'), url('fonts/ArialNova.woff') format('woff');
     text-decoration: none;
     font-size: 24px;
     padding: 5px;
-    font-family: 'Arima Madurai', cursive;
+    font-family: 'Permanent Marker', cursive;
 }
 #header li a:hover, #header li.active a{
     background-image: url(img/menu_hover.png);
@@ -90,7 +85,7 @@ i.close-icon{
 .footer-text{
     display: inline;
     text-align: center;
-    font-family: 'Arima Madurai', cursive;
+    font-family: 'Permanent Marker', cursive;
     padding-top: 30px;
     padding-left: 10px;
 }
@@ -98,7 +93,6 @@ i.fa-facebook, i.fa-instagram{
     font-size: 40px;
     padding: 0 10px 20px 0;
     color:#fff;
-    
 }
 .social-icons-menu{
     display: none;
@@ -143,18 +137,18 @@ i.fa-facebook, i.fa-instagram{
     background: #888;
 }
 .artist-details p{
-        margin: 0;
-        padding: 20px;
-        text-align: center;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 #fp-nav ul li .fp-tooltip{
     -webkit-transition: opacity .2s ease-in;
     transition: opacity .2s ease-in;
     width: auto;
     opacity: 1;
-   font-family: 'Permanent Marker', cursive;
-   padding: 7px 0;
-   font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+    padding: 7px 0;
+    font-size: 20px;
 }
 #fp-nav ul li {
     padding: 15px 0;
@@ -189,8 +183,10 @@ i.fa-facebook, i.fa-instagram{
     font-size: 40px;
 }
 .section.photobox p{
-    font-family: 'Arial Nova';
+    font-family: 'Roboto', sans-serif;
     font-size: 22px;
+    line-height: 24px;
+    text-align: center;
 }
 .section.photobox .fa-camera-retro{
     font-size: 80px;
@@ -249,6 +245,93 @@ i.fa-facebook, i.fa-instagram{
     font-size: 60px;
     color: #5aa46f;
 }
+.about-container{
+    width: 60%;
+    margin-left: 20%;
+}
+.img-wrap-aboutus{
+    width: 84%;
+    margin-left: 8%;
+}
+.image-aboutus{
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.title-aboutus {
+    text-align: center;
+    color: #59a46f;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.subtitle-aboutus{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #9e1414;
+    font-size: 24px;
+}
+.description-aboutus {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+.aboutus{
+    width: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    margin: 0 auto;
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-gap: 40px;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-width: 200px;
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+    padding-bottom: 20px;
+}
+.gallery.cf{
+    position: relative;
+    align-items: center;
+    width: 36%;
+    margin-left: 32%;
+}
+.gallery-img{
+    position: relative;
+    width: 50%;
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    transition: .1s transform;
+    transform: translateZ(0);
+}
+.gallery-title {
+    text-align: center;
+    color: #59a46f;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.gallery-img2, .gallery-img :hover {
+    z-index: 1;
+}
+
+.gallery > div:hover > img {
+    transform: scale(1.1,1.1);
+    transition: .3s transform;
+}
+
+@media screen and (max-width: 1050px){
+    .about-container{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
 @media screen and (max-width: 840px)
 {    
     #header{
@@ -344,4 +427,17 @@ i.fa-facebook, i.fa-instagram{
         width: 100vw;
         height: 100vw;
     }
-}
+    
+    .gallery-img{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    .gallery-img2{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+     }

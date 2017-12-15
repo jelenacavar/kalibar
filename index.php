@@ -47,11 +47,35 @@ if(file_exists($sti))
                         
                 </div>
             </section>
-            <section class="section">
-                <!-- About -->
+            <section class="section about-section">
+                <div class="about-container">
+                    
+                    <div class="img-wrap-aboutus">
+                        <img class="image-aboutus" src="img/kalibar_about.jpg">
+                    </div>
+                    <h1 class="title-aboutus">About us</h1>
+                    <h4 class="subtitle-aboutus">Come for a drink with your friends and support the local artists in KALIBAR!</h4>
+                    <p class="aboutus">
+                        During the last months we have worked hard to get ready with a new concept. It is called KALIBAR, and it’s the first art auction bar in Aarhus. We believe that Aarhus provides unique opportunities for addressing many different art forms. Our KALIBAR serves as a resource for promoting and disseminating ideas, creating community, and improving the places we live. We are inspired by young and talented people in Aarhus. We want to give them a place where they can express themselves and show their talent.
+                    </p>
+                </div>
             </section>
             <section class="section">
-                <!-- Gallery -->
+                <h1 class="gallery-title">Gallery</h1>
+                <div class="gallery cf">
+                    <div>
+                        <img class="gallery-img" src="img/pic1.jpg"/>
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="img/pic2.jpg"/>
+                    </div>
+                    <div>
+                        <img class="gallery-img" src="img/pic3.jpg"/>
+                    </div>
+                    <div>
+                        <img class="gallery-img"src="img/pic4.jpg"/>
+                    </div>
+                </div>
             </section>
             <section class="section">
                 <!-- Events -->
@@ -59,8 +83,8 @@ if(file_exists($sti))
             <section class="section photobox">
                 <!-- Photobox -->
                 <h1>Photobox</h1>
-                <p>Take a pictures of yourself here at kalibar!</p>
-                <p>We display all the picture below.</p>
+                <p>You are welcome to leave your “signature” – your piece of art<br>on the wall in the bar and take a picture of it. Take a picture of yourself<br>and your friends while you are enjoying your time in our Kalibar!</p>
+                <p>Click on camera and start :)</p>
                 <i class="fa fa-camera-retro" id="open-ph-modal"></i>
                 <div class="photobox-slider">
                     <?php foreach($pictures as $key => $picture): ?>
