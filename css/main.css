@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+p {
+    font-family: 'Arial Nova';
+    line-height: 170%;
+    font-size: 13pt;
+}
 #header{
     position: fixed;
     top: 0;
@@ -114,21 +119,38 @@ i.fa-facebook, i.fa-instagram{
     height: 50%;
     margin: 0;
 }
+.artist-details.top-middle img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 7%;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+.artist-details.top-middle p {
+margin: 5%;
+}
 .artist-details.top-middle{
     top: 0;
     left: 20%;
     background: #d3d3d3;
     z-index: 2;
     width: 60%;
+    text-align: center;
     -webkit-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
     box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
 }
+
 .artist-details.bottom-left{
     top: calc(50% - 40px);
     width: 40%;
     left: 10%;
     background: #5aa46f;
+}
+.artist-details.bottom-left p {
+    position: relative;
+    top: 30%;
+    padding: 5%;
 }
 .artist-details.bottom-right{
     top: calc(50% - 40px);
