@@ -24,8 +24,7 @@ if(file_exists($sti))
         <main id="fullpage">
             <section class="section">                
                 <!-- Home page -->                                
-                <div class="home-wrap">
-                    <img class="homepic" src="img/home-picture.jpg" alt="Kalibar">
+                <div class="home-wrap">                    
                     <img class="banner" src="img/banner.png" alt="banner">                    
                     <a href="#events" class="button" id="button">Read more</a> 
                 </div>
@@ -69,8 +68,7 @@ if(file_exists($sti))
                     <div class="img-wrap-aboutus">
                         <img class="image-aboutus" src="img/kalibar_about.jpg">
                     </div>
-                    <h1 class="title-aboutus">About us</h1>
-                    <h4 class="subtitle-aboutus">Come for a drink with your friends and support the local artists in KALIBAR!</h4>
+                    <h1 class="title-aboutus">About us</h1>                    
                     <p class="aboutus">
                         During the last months we have worked hard to get ready with a new concept. It is called KALIBAR, and it’s the first art auction bar in Aarhus. We believe that Aarhus provides unique opportunities for addressing many different art forms. Our KALIBAR serves as a resource for promoting and disseminating ideas, creating community, and improving the places we live. We are inspired by young and talented people in Aarhus. We want to give them a place where they can express themselves and show their talent.
                     </p>

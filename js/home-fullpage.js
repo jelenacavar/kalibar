@@ -39,7 +39,7 @@ $(document).ready(function() {
 		scrollOverflowOptions: null,
 		touchSensitivity: 15,
 		normalScrollElementTouchThreshold: 5,
-		bigSectionsDestination: 'bottom',
+		bigSectionsDestination: 'top',
 
 		//Accessibility
 		keyboardScrolling: true,
@@ -49,7 +49,7 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#000', '#000', '#d3d3d3', '#000', "#d3d3d3" ,'#484848', '#383838', '#000'],
+		sectionsColor : ['#000', '#333', '#d3d3d3', '#000', "#d3d3d3" ,'#484848', '#383838', '#000'],
 		paddingTop: '3em',
 		//paddingBottom: '10px',
 		//fixedElements: '#header, .footer',
