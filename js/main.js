@@ -12,7 +12,7 @@ $(document).ready(function() {
     }); 
     $('#close-ph-modal').click(function(){
         hideModal('#ph-modal');
-    });
+    });    
     function showModal(id){
         $(id).show();
         $('#fp-nav').hide();
@@ -50,19 +50,32 @@ $(document).ready(function() {
         }
         
         var button = document.getElementById("take-picture");
-        var canvas = document.getElementById("photo");
+        var canvas = document.getElementById("photo");  
         canvas.height = camHeight;
         canvas.width = camWidth;
-        
         button.addEventListener('click', function(){
-            convertVideoToCanvas(canvas, video, camWidth, camHeight);
+            video.pause();
+            $('.approval-icons').show();
+            button.style.display = 'none';
+            convertVideoToCanvas(canvas, video, camWidth, camHeight, button);
         });
         
     }
-    function convertVideoToCanvas(canvas, video, camWidth, camHeight) {
+    function convertVideoToCanvas(canvas, video, camWidth, camHeight, button) {
         canvas.getContext("2d").drawImage(video, 0, 0, camWidth, camHeight, 0, 0, camWidth, camHeight);
         var img = canvas.toDataURL("image/png");
         
+        $('#save-picture').click(function(){
+            saveImageFile(img);
+        });
+        $('#refuse-picture').click(function(){
+            $('.approval-icons').hide();
+            button.style.display = 'block';
+            video.play();
+        });
+    };
+    
+    function saveImageFile(img){
         $.ajax({
             type: "POST",
             url: "photobox.php",
@@ -70,13 +83,11 @@ $(document).ready(function() {
                 imgBase64: img
             }
         }).done(function(o) {
-            console.log('saved'); 
-            // If you want the file to be visible in the browser 
-            // - please modify the callback in javascript. All you
-            // need is to return the url to the file, you just saved 
-            // and than put the image in your browser.
-        });
-    };
+            setTimeout(function(){
+                location.reload();
+            }, 200);                        
+        });        
+    }
     $('.photobox-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 5,

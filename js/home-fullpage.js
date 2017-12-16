@@ -49,20 +49,18 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#000', '#333', '#d3d3d3', '#000', "#d3d3d3" ,'#484848', '#383838', '#000'],
-		paddingTop: '3em',
+		sectionsColor : ['#000', '#333', '#000', '#000', "#333" ,'#484848', '#383838', '#000'],
+		paddingTop: '1em',
 		//paddingBottom: '10px',
 		//fixedElements: '#header, .footer',
 		responsiveWidth: 839,
-		responsiveHeight: 0,
+		responsiveHeight: 500,
 		responsiveSlides: false,
 		parallax: false,
 		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
 		//Custom selectors
 		sectionSelector: '.section',
 		slideSelector: '.slide',
-
 		lazyLoading: true,
 
 		//events

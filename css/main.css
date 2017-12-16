@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-p {
-    font-family: 'Arial Nova';
-    line-height: 170%;
-    font-size: 13pt;
-}
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 #header{
     position: fixed;
     top: 0;
@@ -19,6 +15,7 @@ p {
 #menu{
     display: none;
 }
+
 #header nav{
     display: inline-block;
     float: right;
@@ -119,29 +116,26 @@ i.fa-facebook, i.fa-instagram{
     height: 50%;
     margin: 0;
 }
-.artist-container p{
-    font-family: 'Roboto', sans-serif;
-}
-.artist-details.top-middle img {
-    border-radius: 50%;
-    max-width: 100%;
-    height: calc(50% - 10px);
-    max-height: 200px;
-    width: auto;
-    margin-top: 10px;
-    box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
-}
-.artist-details.top-middle p {
-    height: calc(50% - 20px);
-    font-family: 'Roboto', sans-serif;
+.artist-details.top-middle h1{
+    font-family: 'Baloo', cursive;
+    text-transform: uppercase;
+    color: #5aa46f;
+    position: absolute;
+    bottom: 0;
 }
 .artist-details.top-middle{
     top: 0;
     left: 20%;
-    background: #E3E9E5;
+    min-height: 300px;
     z-index: 2;
     width: 60%;
     text-align: center;
+    background: url(img/lars.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: right 10px top;
     -webkit-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
     box-shadow: -3px 34px 91px 0px rgba(0,0,0,0.5);
@@ -151,7 +145,9 @@ i.fa-facebook, i.fa-instagram{
     top: calc(50% - 40px);
     width: 40%;
     left: 10%;
-    background: #5aa46f;    
+    background: #5aa46f;  
+    font-family: 'Roboto', sans-serif;
+    color: #E3E9E5;
 }
 .artist-details.bottom-left p {
     position: relative;
@@ -214,8 +210,8 @@ i.fa-facebook, i.fa-instagram{
 }
 .section.photobox p{
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 34px;
     text-align: center;
 }
 .section.photobox .fa-camera-retro{
@@ -241,6 +237,20 @@ i.fa-facebook, i.fa-instagram{
     width: calc(100vw / 3);
     height: calc(100vw / 3);
     border: 50px solid #333;
+    border-radius: 15px;
+}
+.fa.approval-icons{
+    display: none;
+}
+.approval-icons:before{
+    font-size: 35px;
+}
+.photo-frame .fa-check{
+    color: green;
+}
+.photo-frame .fa-times{
+    color: red;
+    float: right;
 }
 .photo-frame video{
     width: 100%;
@@ -276,8 +286,23 @@ i.fa-facebook, i.fa-instagram{
     color: #5aa46f;
 }
 .about-container{
-    width: 60%;
-    margin-left: 20%;
+    position: relative;
+    width: 100%;
+    height: calc(100% + 2em);
+    background: url(img/about-background.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-text-wrap{
+    background: rgba(0,0,0,0.8);
+    width: 70%;
+    color: #fff;
+    padding: 40px 60px;
 }
 .img-wrap-aboutus{
     width: 84%;
@@ -290,10 +315,13 @@ i.fa-facebook, i.fa-instagram{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-.title-aboutus {
+.title-aboutus, .title-events {
     text-align: center;
     color: #59a46f;
     font-family: 'Permanent Marker', cursive;
+}
+.title-events{
+    margin-bottom: -40px;
 }
 .description-aboutus {
     max-width: 900px;
@@ -321,17 +349,22 @@ i.fa-facebook, i.fa-instagram{
 .gallery.cf{
     position: relative;
     align-items: center;
-    width: 36%;
-    margin-left: 32%;
+    width: 80%;
+    margin-left: 10%;
 }
-.gallery-img{
-    position: relative;
-    width: 50%;
+.gallery.cf > div{
+    width: calc(100% / 3);
     float: left;
+}
+.gallery-img{    
+    position: relative;
+    display: block;
     margin: 0;
     overflow: hidden;
     transition: .1s transform;
     transform: translateZ(0);
+    max-width: 100%;
+    max-height: calc(50vh - 5em);
 }
 .gallery-title {
     text-align: center;
@@ -339,7 +372,7 @@ i.fa-facebook, i.fa-instagram{
     font-family: 'Permanent Marker', cursive;
 }
 
-.gallery-img2, .gallery-img :hover {
+.gallery-img:hover {
     z-index: 1;
 }
 
@@ -384,11 +417,108 @@ i.fa-facebook, i.fa-instagram{
     right: 10%;
     max-width: 70%;
 }
-@media screen and (max-width: 1050px){
-    .about-container{
-        width: 80%;
-        margin-left: 10%;
-    }
+#slider,
+.wrap,
+.slide-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.wrap {
+    position: relative;
+}
+.slide-content {
+    margin-top: 10%;
+    text-align: center;
+    position: relative;
+    height: 70%;
+    overflow-y: hidden;
+    /* max-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.slide-custom{
+    position: absolute;
+    top: 40px;
+}
+.slide-custom img{
+    max-height: 230px;
+    display: block;
+}
+.slide1 {
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+    
+} 
+.slide2 {
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+    0%   {opacity:1}
+    33.333% { opacity: 0}
+    66.666% { opacity: 0}
+    100% { opacity: 1}
+}
+@keyframes fade2
+{
+    0%   {opacity:0}
+    33.333% { opacity: 1}
+    66.666% { opacity: 0 }
+    100% { opacity: 0}
+}
+@keyframes fade3
+{
+    0%   {opacity:0}
+    33.333% { opacity: 0}
+    66.666% { opacity: 1}
+    100% { opacity: 0}
+}
+.event-slider{
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+.event-slider .intro{
+    background: #000;
+    color:#fff;
+    height: 80%;
+    padding: 110px;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.fp-controlArrow.fp-prev{
+   border-color: transparent #9E1414 transparent transparent;    
+}
+.fp-controlArrow.fp-next{
+    border-color: transparent transparent transparent #9E1414;
+}
+.map{
+    width: 70%;
+    margin: 0 auto;
+    height: 60%;
+}
+.findus-section h1{
+    font-family: 'Permanent Marker', cursive;
+    color:white; 
+    text-align: center;
+}
+.findus-section p{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color:white; 
+    text-align: center;
 }
 @media screen and (max-width: 1283px){
     .artist-details.bottom-left p{
@@ -396,124 +526,149 @@ i.fa-facebook, i.fa-instagram{
     }  
 }
 @media screen and (max-width: 840px)
-{    
-    #header{
-        display: block;
-    }
-    #fp-nav{
-        display: none !important;
-    }
-    i.close-icon{
-        display: block;
-        color: #5aa46f;
-        font-size: 28px;
-        float: right;
-        padding: 2px 20px 2px 2px;
-    }
-    #menu{
-        display: none;
-        position: fixed;
-        width: 60%;
-        right: 0;
-        background: rgba(0,0,0,0.8);
-        top: 0;
-    }
-    .social-icons-menu{
-        display: block;
-        text-align: right;
-    }
-    #header ul{
-        padding: 20px 0 20px 20px;
-        margin: 0;
-    }
-    #header li {
-        display: block;
-        padding-bottom: 10px;
-    }
-    #menu.active{
-        display: block;
-    }
-    #header li a{
-        color: #fff;
-    }
-    #header li a:hover, #header li.active a{
-        background-image: none;
-        color: #5aa46f;
-    }
-    .mobile-nav{
-        display: block;
-        background: #000;
-        width: 60px;
-        width: 60px;
-        padding-top: 2px;
-        border: none;
-        outline: none;
-    }
-    .header-logo{
-        width: 60%;
-    }
-    .mobile-nav span{
-        border-bottom: 5px solid #fff;
-        padding: 5px 4px;
-        display: block;
-        border-radius: 4px;
-    }
-    .social-icons-footer{
-        display: none;
-    }
-    .artist-section{
-        height: auto !important;
-    }
-    .artist-details.top-middle{
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-    }
-    .artist-details{
-        position: relative;
-        left: 0 !important;
-        right: 0 !Important;
-        top: auto !important;
-        width: 100% !important;        
-        height: auto !important;
-        margin: 0;
-    }
-    .artist-details p{
-        margin: 0;
-        padding: 10px;
-    }
-    .artist-details.bottom-left p{
-        top: 0;
-        position: static;
-        min-height: 300px;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-    }
-    .photobox-slider{
-        width: 100%;
-        margin-left: 0;
-    }
-    .photo-frame{
-        width: 100vw;
-        height: 100vw;
-    }
-    
-    .gallery-img{
-        position: relative;
-        width: 100%;
-        margin: 0;
-        overflow: hidden;
-    }
-    .gallery-img2{
-        position: relative;
-        width: 100%;
-        margin: 0;
-        overflow: hidden;
-    }
-    .img-wrap-aboutus{
-        width: 125%;
-        margin-left: -13%;
-    }
+{    .event-slider{
+         width: 100%;
+         height: 100%;
+     }     
+     #header{
+         display: block;
+     }
+     #fp-nav{
+         display: none !important;
+     }
+     i.close-icon{
+         display: block;
+         color: #5aa46f;
+         font-size: 28px;
+         float: right;
+         padding: 2px 20px 2px 2px;
+     }
+     #menu{
+         display: none;
+         position: fixed;
+         width: 60%;
+         right: 0;
+         background: rgba(0,0,0,0.8);
+         top: 0;
+     }
+     .social-icons-menu{
+         display: block;
+         text-align: right;
+     }
+     #header ul{
+         padding: 20px 0 20px 20px;
+         margin: 0;
+     }
+     #header li {
+         display: block;
+         padding-bottom: 10px;
+     }
+     #menu.active{
+         display: block;
+     }
+     #header li a{
+         color: #fff;
+     }
+     #header li a:hover, #header li.active a{
+         background-image: none;
+         color: #5aa46f;
+     }
+     .mobile-nav{
+         display: block;
+         background: #000;
+         width: 60px;
+         width: 60px;
+         padding-top: 2px;
+         border: none;
+         outline: none;
+     }
+     .header-logo{
+         width: 60%;
+     }
+     .mobile-nav span{
+         border-bottom: 5px solid #fff;
+         padding: 5px 4px;
+         display: block;
+         border-radius: 4px;
+     }
+     .social-icons-footer{
+         display: none;
+     }
+     .artist-section{
+         height: auto !important;
+     }
+     .artist-details.top-middle{
+         -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+         box-shadow: none;
+     }
+     .artist-details{
+         position: relative;
+         left: 0 !important;
+         right: 0 !Important;
+         top: auto !important;
+         width: 100% !important;        
+         height: auto !important;
+         margin: 0;
+     }
+     .artist-details p{
+         margin: 0;
+         padding: 10px;
+     }
+     .artist-details.bottom-left p{
+         top: 0;
+         position: static;
+         min-height: 300px;
+         display: flex;
+         align-items: center;
+         align-content: center;
+         justify-content: center;
+     }
+     .photobox-slider{
+         width: 100%;
+         margin-left: 0;
+     }
+     .photo-frame{
+        width: 70%;
+        height: 50%;
+     }
+     .fa.modal-close-icon{
+         top: 8px;
+     }
+     .gallery-img{
+         position: relative;
+         width: 100%;
+         margin: 0;
+         overflow: hidden;        
+     }
+     .gallery-img2{
+         position: relative;
+         width: 100%;
+         margin: 0;
+         overflow: hidden;
+     }
+     .img-wrap-aboutus{
+         width: 125%;
+         margin-left: -13%;
+     }
+     .slide-content {
+         margin-top: 0;
+         min-height: 300px;
+     }
+     .gallery.cf{
+         width: 100%;
+         margin-left: 0;
+     }
+     .gallery.cf > div{
+         width: 50%;
+     }
+     .event-slider .intro{
+         padding: 0 60px;
+         height: 100%;
+         font-size: 18px;
+         line-height: 25px;
+     }
+     .map{
+         width: 100%;
+     }
 }

@@ -34,44 +34,36 @@ if(file_exists($sti))
                 <!-- Artists -->
                 <div class="artist-container">
                     <div class="artist-details top-middle">
-                        <img src="img/lars.png" alt="">
-                        <p>Lars Larsen - guide in museum inspired by historical and artistic environment. Since he was 25 years old, he found that the best way to take his emotions away is to shape hand-craft art. Since Lars has more than ten years experience, he is confident enough to share his work at Kalibar!</p>
-                    </div>
+                        <h1>Meet Lars, artist that will exhibit in our bar this month.</h1>
+                    </div> 
                     <div class="artist-details bottom-left">
                         <p>
-                            Wooden hand-crafts of smaller size sculptures, statues, reflections. High attention to detail, home made, high quality material, inspired by Aarhus and Denmark surroundings art.
+                            His work is connected to wooden hand-crafts of smaller size sculptures and reflections. He gives high attention to the detail. Art is inspired by Aarhus and Denmark surroundings art.
                         </p>
                     </div>
                     <div class="artist-details bottom-right">
-                        <div class="wrap">
-                            <div id="arrow-left" class="arrow"></div>
-                            <div id="slider">
-                                <div class="slide slide1">
-                                    
-                                </div>
-                                <div class="slide slide2">
-                                    
-                                </div>
-                                <div class="slide slide3">
-                                    
-                                </div>
+                        <div class="wrap slide-content">
+                            <div class='slide-custom slide1'>
+                                <img class="img-responsive" src="img/pic1_1.jpg" alt="sculpture" >
                             </div>
-                            <div id="arrow-right" class="arrow"></div>
+                            <div class="slide-custom slide2">
+                                <img class="img-responsive" src="img/pic2_1.jpg" alt="sculpture" >
+                            </div>
+                            <div class='slide-custom slide3'>
+                                <img class="img-responsive" src="img/pic3_1.jpg" alt="sculpture" >
+                            </div>
                         </div>
-                    </div>
-                    
+                    </div>                        
                 </div>
             </section>
             <section class="section about-section">
                 <div class="about-container">
-                    
-                    <div class="img-wrap-aboutus">
-                        <img class="image-aboutus" src="img/kalibar_about.jpg">
+                    <div class="about-text-wrap">
+                        <h1 class="title-aboutus">About us</h1>                    
+                        <p class="aboutus">
+                            During the last months we have worked hard to get ready with a new concept. It is called KALIBAR, and it’s the first art auction bar in Aarhus. We believe that Aarhus provides unique opportunities for addressing many different art forms. Our KALIBAR serves as a resource for promoting and disseminating ideas, creating community, and improving the places we live. We are inspired by young and talented people in Aarhus. We want to give them a place where they can express themselves and show their talent.
+                        </p>
                     </div>
-                    <h1 class="title-aboutus">About us</h1>                    
-                    <p class="aboutus">
-                        During the last months we have worked hard to get ready with a new concept. It is called KALIBAR, and it’s the first art auction bar in Aarhus. We believe that Aarhus provides unique opportunities for addressing many different art forms. Our KALIBAR serves as a resource for promoting and disseminating ideas, creating community, and improving the places we live. We are inspired by young and talented people in Aarhus. We want to give them a place where they can express themselves and show their talent.
-                    </p>
                 </div>
             </section>
             <section class="section">
@@ -89,10 +81,30 @@ if(file_exists($sti))
                     <div>
                         <img class="gallery-img"src="img/pic4.jpg"/>
                     </div>
+                    <div>
+                        <img class="gallery-img" src="img/pic5.png"/>
+                    </div>
+                    <div>
+                        <img class="gallery-img"src="img/pic6.jpg"/>
+                    </div>
                 </div>
             </section>
             <section class="section">
-                <!-- Events -->
+                <div class="event-slider">
+                    <div class="slide">
+                        <div class="intro">
+                            <img class="img-responsive" src="img/banner.png" alt="banner">
+                            <p>The heat for different experiences such us live music, reading, design,film shows and what we otherwise find out when we travel into the great art work. Come and remind yourself how we did it before. We can't wait to see you!</p>
+                        </div>
+                        
+                    </div>
+                    <div class="slide">
+                        <div class="intro">
+                            <img class="img-responsive" src="img/banner1.png" alt="banner">
+                            <p>We offer you a variety of the cocktails. Bring your friends and enjoy one of the cocktails made by our barman. We also prepared our stage for jam session night. We are waiting for you!  </p>
+                        </div>
+                    </div>                    
+                </div>
             </section>
             <section class="section photobox">
                 <!-- Photobox -->
@@ -111,17 +123,18 @@ if(file_exists($sti))
                     <?php endforeach; ?>
                 </div>
             </section>
-            <section class="section">
-                
-                
-                <h1 style=" color:white; text-align: center;" >Contact us!</h1>
-                <h2 style=" color: white;text-align: center" >Mobile: 45222222<br>
-                    Email: KalibarAarhus@gmail.com</h2>
+            <section class="findus-section section">
+                <h1 style=" color:white; text-align: center;" >Find us!</h1>
+                <p style=" color: white;text-align: center" >
+                    <i class="fa fa-phone"></i> 45222222<br>
+                    <i class="fa fa-envelope"></i> KalibarAarhus@gmail.com
+                </p>
                 
                 <!-- Find Us Google maps Starts -->
-                
-                <iframe width="100%" height="600px" frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
+                <div class="map">
+                    <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
+                </div>
                 
                 <!-- Find Us Google maps Ends -->
                 
@@ -137,9 +150,11 @@ if(file_exists($sti))
             <i class="modal-close-icon fa fa-times" id="close-ph-modal"></i>
             <div class="photo-frame" id="video-feed">
                 <video autoplay="false" id="videoElement"></video>                
+                <canvas id="photo" style="display: none;"></canvas>
+                <i class="fa fa-check approval-icons" id="save-picture"></i>
+                <i class="fa fa-times approval-icons" id="refuse-picture"></i>
                 <div class="circle-btn" id="take-picture"></div>
             </div>
-            <canvas id="photo" style="display: none;"></canvas>
         </div>
         <?php include 'components/scripts.php'; ?>
         <script src="js/home-fullpage.js"></script>        
