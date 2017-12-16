@@ -10,7 +10,7 @@ $(document).ready(function() {
 		navigationPosition: 'right',
 		//navigationTooltips: ['Home', 'Artists', 'About', 'Gallery', 'Find Us', 'Photobox'],
 		showActiveTooltip: false,
-		slidesNavigation: true,
+		slidesNavigation: false,
 		slidesNavPosition: 'bottom',
 
 		//Scrolling
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 		//Custom selectors
 		sectionSelector: '.section',
-		slideSelector: '.slide',
+		slideSelector: '.slidefp',
 
 		lazyLoading: true,
 

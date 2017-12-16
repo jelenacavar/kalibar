@@ -9,7 +9,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #000;
     display: block;
     width: 100%;
     z-index: 1;
@@ -119,20 +119,26 @@ i.fa-facebook, i.fa-instagram{
     height: 50%;
     margin: 0;
 }
+.artist-container p{
+    font-family: 'Roboto', sans-serif;
+}
 .artist-details.top-middle img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: 7%;
+    max-width: 100%;
+    height: calc(50% - 10px);
+    width: auto;
+    margin-top: 10px;
     box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 }
 .artist-details.top-middle p {
-margin: 5%;
+    height: calc(50% - 20px);
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 .artist-details.top-middle{
     top: 0;
     left: 20%;
-    background: #d3d3d3;
+    background: #E3E9E5;
     z-index: 2;
     width: 60%;
     text-align: center;
@@ -145,12 +151,14 @@ margin: 5%;
     top: calc(50% - 40px);
     width: 40%;
     left: 10%;
-    background: #5aa46f;
+    background: #5aa46f;    
 }
 .artist-details.bottom-left p {
     position: relative;
-    top: 30%;
+    top: 60px;
     padding: 5%;
+    font-size: 26px;
+    text-align: justify;
 }
 .artist-details.bottom-right{
     top: calc(50% - 40px);
@@ -346,7 +354,37 @@ margin: 5%;
     transform: scale(1.1,1.1);
     transition: .3s transform;
 }
-
+.home-wrap{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+}
+.fp-slidesNav{
+    display: none;
+}
+.home-wrap .button{
+    right: 20px;
+    color: white; 
+    position: absolute; 
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    bottom: 0; 
+    padding: 15px 30px; 
+    background-color: #59a46f; 
+    text-decoration: none; 
+    border-radius: 8px;
+    transform: translateY(-50%);
+}
+.home-wrap .homepic{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.home-wrap .banner{
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+}
 @media screen and (max-width: 1050px){
     .about-container{
         width: 80%;
@@ -401,7 +439,7 @@ margin: 5%;
     }
     .mobile-nav{
         display: block;
-        background: #fff;
+        background: #000;
         width: 60px;
         width: 60px;
         padding-top: 2px;
@@ -412,7 +450,7 @@ margin: 5%;
         width: 60%;
     }
     .mobile-nav span{
-        border-bottom: 5px solid black;
+        border-bottom: 5px solid #fff;
         padding: 5px 4px;
         display: block;
         border-radius: 4px;

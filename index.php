@@ -19,27 +19,17 @@ if(file_exists($sti))
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->        
-        <!-- Add your site or application content here -->
+        <![endif]-->
         <?php include 'components/header.php'; ?>
         <main id="fullpage">
             <section class="section">                
-                <!-- Home page -->
-                
-                
-                <div>
-                    <img class="homepic" style="width: 1900px;" src="https://static1.squarespace.com/static/56b1362af8baf3f55713dba7/t/59cabd2aedaed88c86680708/1506458928146/8435293722_d7da782a88_b.jpg?format=1500w" alt="mid">
-                    
-                    <img class="banner" style="max-width: 100%; height: 32%;   position: absolute; top: 55%;" src="banner.png" alt="ban">
-                    
-                    <enter><a href="#" class="button" id="button" style="  color: white; position: absolute; top: 90%; left: 20%;  padding: 25px 50px; background-color: #5ca370; text-decoration: none; border-radius: 8px; transform: translateY(-50%);">More info</a></enter>
-                
+                <!-- Home page -->                                
+                <div class="home-wrap">
+                    <img class="homepic" src="img/home-picture.jpg" alt="Kalibar">
+                    <img class="banner" src="img/banner.png" alt="banner">                    
+                    <a href="#events" class="button" id="button">Read more</a> 
                 </div>
-                <!-- Home pgage Ends -->
-                
-                
-                
-                
+                <!-- Home pgage Ends -->                                                          
             </section>
             <section class="artist-section section">
                 <!-- Artists -->
@@ -55,22 +45,22 @@ if(file_exists($sti))
                     </div>
                     <div class="artist-details bottom-right">
                         <div class="wrap">
-                          <div id="arrow-left" class="arrow"></div>
-                          <div id="slider">
-                            <div class="slide slide1">
-
+                            <div id="arrow-left" class="arrow"></div>
+                            <div id="slider">
+                                <div class="slide slide1">
+                                    
+                                </div>
+                                <div class="slide slide2">
+                                    
+                                </div>
+                                <div class="slide slide3">
+                                    
+                                </div>
                             </div>
-                            <div class="slide slide2">
-
-                            </div>
-                            <div class="slide slide3">
-
-                            </div>
-                          </div>
-                          <div id="arrow-right" class="arrow"></div>
+                            <div id="arrow-right" class="arrow"></div>
                         </div>
                     </div>
-                        
+                    
                 </div>
             </section>
             <section class="section about-section">
@@ -125,17 +115,17 @@ if(file_exists($sti))
             </section>
             <section class="section">
                 
-                 
+                
                 <h1 style=" color:white; text-align: center;" >Contact us!</h1>
                 <h2 style=" color: white;text-align: center" >Mobile: 45222222<br>
-                Email: KalibarAarhus@gmail.com</h2>
+                    Email: KalibarAarhus@gmail.com</h2>
                 
                 <!-- Find Us Google maps Starts -->
                 
                 <iframe width="100%" height="600px" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
+                        src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
                 
-                 <!-- Find Us Google maps Ends -->
+                <!-- Find Us Google maps Ends -->
                 
                 
                 
@@ -154,7 +144,6 @@ src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,
             <canvas id="photo" style="display: none;"></canvas>
         </div>
         <?php include 'components/scripts.php'; ?>
-        <script src="js/home-fullpage.js"></script>
-        
+        <script src="js/home-fullpage.js"></script>        
     </body>
 </html>

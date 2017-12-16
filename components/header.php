@@ -4,7 +4,7 @@
 
 <header id="header">
     <div class="header-logo">
-        <a href="index.php#home"><img src="img/logo-white.jpg" alt="Kalibar" class="img-responsive"/></a>
+        <a href="index.php#home"><img src="img/logo-black.png" alt="Kalibar" class="img-responsive"/></a>
     </div>
     <nav>
         <button id="mobile-nav" class="mobile-nav">
