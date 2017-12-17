@@ -1,4 +1,5 @@
 <?php
+//Footer content
 ?>
 <footer>
     <div class="footer-logo">

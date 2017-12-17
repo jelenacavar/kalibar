@@ -14,7 +14,7 @@ if(file_exists($sti))
 }
 ?>
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <?php    include 'components/head.php'; ?>
     <body>
         <!--[if lte IE 9]>
@@ -23,7 +23,8 @@ if(file_exists($sti))
         <?php include 'components/header.php'; ?>
         <main id="fullpage">
             <section class="section">                
-                <!-- Home page -->                                
+                <!-- Home page -->
+                <h1 class="section-title">Home</h1>
                 <div class="home-wrap">                    
                     <img class="banner" src="img/banner.png" alt="banner">                    
                     <a href="#events" class="button" id="button">Read more</a> 
@@ -32,6 +33,7 @@ if(file_exists($sti))
             </section>
             <section class="artist-section section">
                 <!-- Artists -->
+                <h1 class="section-title">Artists</h1>
                 <div class="artist-container">
                     <div class="artist-details top-middle">
                         <h1>Meet Lars, artist that will exhibit in our bar this month.</h1>
@@ -70,26 +72,27 @@ if(file_exists($sti))
                 <h1 class="gallery-title">Gallery</h1>
                 <div class="gallery cf">
                     <div>
-                        <img class="gallery-img" src="img/pic1.jpg"/>
+                        <img class="gallery-img" src="img/pic1.jpg" alt="Kalibar gallery first image"/>
                     </div>
                     <div>
-                        <img class="gallery-img" src="img/pic2.jpg"/>
+                        <img class="gallery-img" src="img/pic2.jpg" alt="Kalibar gallery second image"/>
                     </div>
                     <div>
-                        <img class="gallery-img" src="img/pic3.jpg"/>
+                        <img class="gallery-img" src="img/pic3.jpg" alt="Kalibar gallery third image"/>
                     </div>
                     <div>
-                        <img class="gallery-img"src="img/pic4.jpg"/>
+                        <img class="gallery-img" src="img/pic4.jpg" alt="Kalibar gallery fourth image"/>
                     </div>
                     <div>
-                        <img class="gallery-img" src="img/pic5.png"/>
+                        <img class="gallery-img" src="img/pic5.png" alt="Kalibar gallery fifth image"/>
                     </div>
                     <div>
-                        <img class="gallery-img"src="img/pic6.jpg"/>
+                        <img class="gallery-img" src="img/pic6.jpg" alt="Kalibar gallery sixth image"/>
                     </div>
                 </div>
             </section>
             <section class="section">
+                <h1 class="title-events">Events</h1>
                 <div class="event-slider">
                     <div class="slide">
                         <div class="intro">
@@ -115,25 +118,24 @@ if(file_exists($sti))
                 <div class="photobox-slider">
                     <?php foreach($pictures as $key => $picture): ?>
                         <?php 
-                        // The path of the picture is made by adding the path of the folder 
-                        // Fotorama usage: <a> = Displays picture with full size
-                        // <img> displays the thumbnail of the picture with the defined width and height
+                        // The path of the picture is made by adding the path of the folder
                         ?>
-                    <div><img src="<?php echo $sti . $picture ?>" alt="<?php echo "gallery image N.".$key; ?>"></div>
+                        <div>
+                            <img src="<?php echo $sti . $picture ?>" alt="<?php echo "gallery image N.".$key; ?>">
+                        </div>
                     <?php endforeach; ?>
                 </div>
             </section>
             <section class="findus-section section">
-                <h1 style=" color:white; text-align: center;" >Find us!</h1>
-                <p style=" color: white;text-align: center" >
+                <h1>Find us!</h1>
+                <p>
                     <i class="fa fa-phone"></i> 45222222<br>
                     <i class="fa fa-envelope"></i> KalibarAarhus@gmail.com
                 </p>
                 
                 <!-- Find Us Google maps Starts -->
                 <div class="map">
-                    <iframe width="100%" height="100%" frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
+                    <iframe style="border:0; width: 100%; height: 100%;" src="https://www.google.com/maps/embed/v1/search?q=Klostertorvet+5,+8000+Aarhus,+Denmark&key=AIzaSyCorhMR-Y552ZXIrufua-DbnZJETsBjsJI" allowfullscreen></iframe>
                 </div>
                 
                 <!-- Find Us Google maps Ends -->
@@ -149,14 +151,13 @@ if(file_exists($sti))
         <div class="modal-container" id="ph-modal" style="display: none;">
             <i class="modal-close-icon fa fa-times" id="close-ph-modal"></i>
             <div class="photo-frame" id="video-feed">
-                <video autoplay="false" id="videoElement"></video>                
+                <video id="videoElement"></video>                
                 <canvas id="photo" style="display: none;"></canvas>
                 <i class="fa fa-check approval-icons" id="save-picture"></i>
                 <i class="fa fa-times approval-icons" id="refuse-picture"></i>
                 <div class="circle-btn" id="take-picture"></div>
             </div>
         </div>
-        <?php include 'components/scripts.php'; ?>
-        <script src="js/home-fullpage.js"></script>        
+        <?php include 'components/scripts.php'; ?>      
     </body>
 </html>
