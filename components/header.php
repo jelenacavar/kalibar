@@ -23,7 +23,7 @@
             <li data-menuanchor="find-us"><a href="index.php#find-us">Find Us</a></li>
             <li>
                 <div class="social-icons-menu">
-                    <a href="https://www.instagram.com/kalibaraarhus/?hl=hr"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/kalibaraarhus/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href="https://www.facebook.com/KALIBARAARHUS/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </li>
