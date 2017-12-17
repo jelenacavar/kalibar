@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Baloo');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 #header{
     position: fixed;
     top: 0;
@@ -122,6 +123,7 @@ i.fa-facebook, i.fa-instagram{
     color: #5aa46f;
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .artist-details.top-middle{
     top: 0;
@@ -146,7 +148,7 @@ i.fa-facebook, i.fa-instagram{
     width: 40%;
     left: 10%;
     background: #5aa46f;  
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Amatic SC', cursive;
     color: #E3E9E5;
 }
 .artist-details.bottom-left p {

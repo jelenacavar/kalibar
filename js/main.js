@@ -29,17 +29,23 @@ $(document).ready(function() {
         }
     }
     
-    function startVideoFeed(){  
-        console.log("Start video feed");
+    function startVideoFeed(){
+        var constraints = window.constraints = {
+          audio: false,
+          video: true
+        };
+        navigator.mediaDevices.getUserMedia(constraints).
+        then(handleVideo).catch(videoError);
+
         var video = document.querySelector("#videoElement");
         
-        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+        //navigator.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
         var videoFeed = document.querySelector("#video-feed");
         var camWidth = videoFeed.offsetWidth;
         var camHeight = camWidth;
-        if (navigator.getUserMedia) {       
+        /*if (navigator.getUserMedia) {       
             navigator.getUserMedia({video: { width: camWidth, height: camHeight }}, handleVideo, videoError);
-        }
+        }*/
         
         function handleVideo(stream) {
             globalStream = stream;
