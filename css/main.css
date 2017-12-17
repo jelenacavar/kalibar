@@ -678,4 +678,7 @@ i.fa-facebook, i.fa-instagram{
      .map{
          width: 100%;
      }
+     .about-container{
+         height: auto;
+     }
 }

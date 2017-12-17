@@ -151,7 +151,7 @@ if(file_exists($sti))
         <div class="modal-container" id="ph-modal" style="display: none;">
             <i class="modal-close-icon fa fa-times" id="close-ph-modal"></i>
             <div class="photo-frame" id="video-feed">
-                <video id="videoElement"></video>                
+                <video id="videoElement" autoplay="false"></video>                
                 <canvas id="photo" style="display: none;"></canvas>
                 <i class="fa fa-check approval-icons" id="save-picture"></i>
                 <i class="fa fa-times approval-icons" id="refuse-picture"></i>

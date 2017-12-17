@@ -29,7 +29,8 @@ $(document).ready(function() {
         }
     }
     
-    function startVideoFeed(){    
+    function startVideoFeed(){  
+        console.log("Start video feed");
         var video = document.querySelector("#videoElement");
         
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
@@ -47,6 +48,8 @@ $(document).ready(function() {
         
         function videoError(e) {
             // do something
+            console.log("cannot use video feed");
+            console.log(e);
         }
         
         var button = document.getElementById("take-picture");
