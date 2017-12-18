@@ -49,7 +49,7 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		sectionsColor : ['#000', '#333', '#000', '#000', "#333" ,'#484848', '#383838', '#000'],
+		sectionsColor : ['#000', '#333', '#000', '#000', "#333" ,'#000', '#333', '#000'],
 		paddingTop: '1em',
 		//paddingBottom: '10px',
 		//fixedElements: '#header, .footer',
